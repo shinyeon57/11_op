@@ -1,20 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int main(int argc, char *argv[]) {
 		
-	int i = 100;
-	int *p = &i;
-	int **q = &p;
+	char *proverb = "All that histers is not gold";
 	
-	*p = 200;
-	printf("*i = %d, *p = %d \n", i, *p, **q);
+	void setPointer(char *q)
+	{
+		q = proverb;
+	}
+	/* run this program using the console pauser or add your own getch,
+	system("pause") or input loop*/
 	
-	**q = 300;
-	printf("i = Rd, *p = %d, **q = %d \n", i, *p, **q);
+int main(int argc, char *argv[]) {
 	
-
+	char *p = "zzz";
+	setPointer(p);
+	printf("%s \n", p);
 	return 0;
 }
